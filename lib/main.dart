@@ -1,5 +1,5 @@
+import 'package:design_patterns/creational/abstract_factory.dart';
 import 'package:design_patterns/creational/factory_method.dart';
-import 'package:design_patterns/creational/flutter_factory_method.dart';
 import 'package:flutter/material.dart';
 
 void main(List<String> args) {
@@ -34,11 +34,18 @@ class MyApp extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 20),
-              PlatformButton(TargetPlatform.android).build(
-                () {
-                  print('Clicked The Platform Button');
-                },
-                const Text('PlatForm Button'),
+              AbstractFactoryImplementation().buildButton(
+                context,
+                'Hello',
+                () {},
+              ),
+              const SizedBox(height: 20),
+              AbstractFactoryImplementation().buildIndicator(context),
+              const SizedBox(height: 20),
+              AbstractFactoryAlt.buildButton(
+                context,
+                'Alternate Abstract Factory',
+                () {},
               ),
             ],
           ),
