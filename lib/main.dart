@@ -1,6 +1,7 @@
-import 'package:design_patterns/creational/abstract_factory.dart';
-import 'package:design_patterns/creational/builder_flutter.dart';
-import 'package:design_patterns/creational/factory_method.dart';
+import 'package:design_patterns/creational/abstract_factory/abstract_factory.dart';
+import 'package:design_patterns/creational/builder/builder_flutter.dart';
+import 'package:design_patterns/creational/factory/factory_method.dart';
+import 'package:design_patterns/creational/singleton/singleton.dart';
 import 'package:flutter/material.dart';
 
 void main(List<String> args) {
@@ -23,6 +24,10 @@ class MyApp extends StatelessWidget {
     buttonDirector.setButtonBuilder(BlueButtonBuilder());
 
     CustomButton blueButton = buttonDirector.constructButton();
+
+    Singleton singleton1 = Singleton.getInstance();
+    Singleton singleton2 = Singleton.getInstance();
+    Singleton singleton3 = Singleton.getInstance();
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,

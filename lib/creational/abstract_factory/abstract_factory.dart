@@ -1,5 +1,5 @@
-import 'package:design_patterns/creational/flutter_factory_method.dart';
-import 'package:design_patterns/creational/platform_indicator.dart';
+import 'package:design_patterns/creational/factory/flutter_factory_method.dart';
+import 'package:design_patterns/creational/abstract_factory/platform_indicator.dart';
 import 'package:flutter/material.dart';
 
 abstract class AbstractFactory {
